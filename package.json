@@ -7,7 +7,6 @@
     "test": "jest",
     "test:report": "jest --coverage=true"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Multiverse-Iventory-App/Blue-Team-Inventory-Database.git"
