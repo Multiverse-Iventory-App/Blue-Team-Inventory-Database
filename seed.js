@@ -15,9 +15,9 @@ const seedPalletes = [
 ];
 
 const seedBoxes = [
-    {item_name: "Apple IPhone 13 Pro" , content_QTY: 10, PalltteID: 1},
-    {item_name: "Samsung Galaxy A42 5G" , content_QTY: 15, PalltteID: 2},
-    {item_name: "Google Pixel 6" , content_QTY: 20, PalltteID: 3}
+    {item_name: "Apple IPhone 13 Pro" , content_QTY: 10, PalleteId: 1},
+    {item_name: "Samsung Galaxy A42 5G" , content_QTY: 15, PalleteId: 2},
+    {item_name: "Google Pixel 6" , content_QTY: 20, PalleteId: 3}
 ];
 
 const seed = async () => {
