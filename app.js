@@ -73,6 +73,7 @@ app.put('/warehouse/:id', warehouseChecks, async (req, res) => {
     res.sendStatus(200);
 });
 
+//pallete
 app.get('/pallete', async (req, res) => {
     const allPallete = await Pallete.findAll();
     res.render('palletes', {allPallete}) 
@@ -111,10 +112,7 @@ app.put('/pallete/:id', async (req,res) => {
 })
 
 
-
-
-
-
+//box
 app.get('/box', async (req, res) => {
     const allBox = await Box.findAll();
     res.render('boxes', {allBox}) 
