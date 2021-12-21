@@ -2,7 +2,10 @@
 const express = require("express");
 const app = express()
 const port = 3000
+
+//allow express to read json request bodies
 app.use(express.json())
+app.use(express.urlencoded({extended:false}))
 
 //Handlebars
 const { check, validationResult } = require('express-validator');
@@ -19,6 +22,7 @@ const {Box, Pallete, Warehouse} = require('./index')
 
 
 const path = require('path');
+const { json } = require("body-parser");
 app.use(express.static('public'));
 
 app.engine('handlebars', handlebars);
@@ -30,19 +34,18 @@ const warehouseChecks = [
     check('name').isLength({ max: 50 })
 ]
 
-app.get('/warehouse', async (req, res) => {
+app.get('/warehouses', async (req, res) => {
     const allWarehouse = await Warehouse.findAll();
     res.render('warehouses', {allWarehouse}) 
 });
 
-app.get('/warehouse/:id', async (req, res) => {
-    const allWarehouse = await Warehouse.findAll();
+app.get('/warehouses/:id', async (req, res) => {
     const warehouse = await Warehouse.findByPk(req.params.id, {include: {
             model: Pallete,
             include: Box
         }
     });
-    res.render("warehouse", { warehouse, allWarehouse });
+    res.render("warehouse", {warehouse});
 });
 
 app.post('/warehouse', warehouseChecks, async (req, res) => {
@@ -79,14 +82,18 @@ app.get('/pallete', async (req, res) => {
     res.render('palletes', {allPallete}) 
 });
 
+app.get('/new-pallete', async (req, res) => {
+    res.render('newPalleteForm')
+})
 
 app.post('/new-pallete', async (req,res) =>{
-
-    const newPallet = await Pallete.create(req.body)
-
-    let palleteAlert = `${newPallet.name} added to your database`
+console.log(req.body);
+    const newPallete = await Pallete.create(req.body)
     
-    const foundPallete = await Pallete.findByPk(newPallet.id)
+    
+    let palleteAlert = `${(newPallete.capacity)} added to your database`
+    
+    const foundPallete = await Pallete.findByPk(newPallete.id)
     if(foundPallete){
         res.render('newPalleteForm',{palleteAlert})
     } else {
