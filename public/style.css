@@ -6,8 +6,8 @@
     margin-bottom: 70px;  
 }
 
-#banner-slides{
-    height: 750px;
+.banner-img {
+    height: 300px;
 }
 
 /* main-button styles */
