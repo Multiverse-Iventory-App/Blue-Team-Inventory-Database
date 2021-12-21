@@ -20,7 +20,7 @@ async function box(value) {
     console.log(currentBoxes)
     currentBoxes += value
     boxCounter.innerHTML = currentBoxes
-    let res = await fetch (`/sauces/${id}`, {
+    let res = await fetch (`/palletes/${id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
