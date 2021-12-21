@@ -1,5 +1,6 @@
-#logo-img{
-    margin-left:50px;
+/* /* header styles */
+#logo-img{ 
+    margin-left:100px;
     height: 50px;
     width: 200px; 
     margin-bottom: 70px;  
@@ -9,13 +10,66 @@
     height: 750px;
 }
 
+/* main-button styles */
 #warehouses-button{
     background-color: rgb(52, 4, 184);
     
 }
+
 .main-button{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 200px;
 }
+
+/* employee-news-section styles */
+.news-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.employees{
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+    margin-left: 2%;
+    margin-right: 2%; 
+    margin-top: 2cm;   
+    
+}
+
+/* FAQ -section styles */
+
+.faq-sec-img{
+    width:550px;
+    height:550px;
+    margin-left:5%;
+}
+
+/* ------- Fotter-Styles -------- */
+
+.footer{
+    align-items: center;
+    margin-top:1.5in;
+    margin-bottom:1cm;    
+}
+
+.social-icons{    
+    display:flex;
+    justify-content: center;
+}
+
+.icons-img{
+    margin-left: .2cm;
+    margin-right: .2cm;
+}
+
+.copyright small{
+    margin-top:1cm;
+    display:flex;
+    justify-content: center;
+}
+
