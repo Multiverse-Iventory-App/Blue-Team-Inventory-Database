@@ -1,9 +1,10 @@
 <section>
-	<h2>There are {{allWarehouse.length}} Warehouses</h2>
-    <br>
-    <br>
+	<div>
+        <h2 >There are {{allWarehouse.length}} Warehouses</h2>
+        <br>
+        <br>
 
-    <div class="dropdown">
+        <div class="dropdown">
             <button class="dropbtn">Warehouses</button>
             <div class="dropdown-content">
                 {{#each allWarehouse}}
@@ -11,8 +12,10 @@
                 {{/each}}
             </div>
           </div>
-	{{#each allWarehouse}} 
-    
+    </div>
+	    
+        
+        {{#each allWarehouse}} 
 		<ul>
             <li>
                 <article class="card">
