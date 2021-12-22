@@ -80,14 +80,25 @@ app.put('/warehouse/:id', warehouseChecks, async (req, res) => {
 //pallete
 app.get('/pallete', async (req, res) => {
     const allPallete = await Pallete.findAll();
-    res.render('palletes', {allPallete}) 
+    res.render('pallete', {allPallete}) 
 });
 
+app.get('/pallete/:id', async (req, res) => {
+    const pallete = await Pallete.findByPk(req.params.id, {include: {
+        model: Box
+        }
+    });
+    console.log(pallete)
+    res.render('pallete', {pallete}) 
+});
+
+//added id 
 app.get('/new-pallete/:id', async (req, res) => {
     const id = req.params.id
     res.render('newPalleteForm', {id})
 })
 
+//new pallete form
 app.post('/new-pallete/:id', async (req,res) =>{
 console.log(req.body);
     const newPallete = await Pallete.create({"capacity": req.body.capacity, "WarehouseId": req.params.id})  
