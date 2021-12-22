@@ -45,6 +45,7 @@ app.get('/warehouses/:id', async (req, res) => {
             include: Box
         }
     });
+    console.log(warehouse);
     res.render("warehouse", {warehouse});
 });
 
@@ -95,11 +96,12 @@ console.log(req.body);
     
     const foundPallete = await Pallete.findByPk(newPallete.id)
     if(foundPallete){
-        res.render('newPalleteForm',{palleteAlert})
+        res.render('newPalleteForm',{})
     } else {
         palleteAlert = 'Failed to add Pallete'
         res.render('newPalleteForm',{palleteAlert})
     }
+
 })
 
 //DELETE method,  Deletes a pallete from db.sqlite

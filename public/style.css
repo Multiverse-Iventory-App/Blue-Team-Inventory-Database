@@ -7,17 +7,23 @@
 }
 
 .banner-img {
-    height: 400px;
+    height: 450px;
 }
 
 
 /* main-button styles */
-#warehouses-button{
-    background-color: rgb(52, 4, 184);
+#warehouses-button{ 
+  color :antiquewhite;
+  text-decoration: none;
     
 }
 
+.btn-lg{
+  background-color: rgb(52, 4, 184);
+  
+}
 .main-button{
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,7 +80,8 @@
     justify-content: center;
 }
 
-/* warehouse handlebar styles */
+/* warehouses handlebar styles */
+
 
 .dropbtn {
     background-color: #04aa6d;
@@ -117,3 +124,13 @@
     background-color: #3e8e41;
   }
   
+  /* warehouse- styles */
+  .signle-warehouse-card{
+    justify-content: center;
+    align-items: center;
+  }
+  .item-img{
+    height: 200px;
+    width:350px;
+    
+  }
