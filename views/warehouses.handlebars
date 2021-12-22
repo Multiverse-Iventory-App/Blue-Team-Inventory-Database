@@ -5,29 +5,31 @@
         <br>
 
         <div class="dropdown">
-            <button class="dropbtn">Warehouses</button>
+            <button class="btn btn-lg warehouse-btn dropbtn">Warehouses</button>
             <div class="dropdown-content">
                 {{#each allWarehouse}}
                 <a href="/warehouses/{{id}}"> {{name}}</a>
                 {{/each}}
             </div>
           </div>
+          <br>
+          <br>
     </div>
 	    
         
         {{#each allWarehouse}} 
-		<ul>
-            <li>
                 <article class="card">
                     <img class="item-img" src="{{image}}"/>
 			        <h2>Name: {{name}}</h2>
 			        <h3>Location: {{location}}</h3>
 			        <h3>Capacity: {{capacity}}</h3>
                     <br>
-                    <button id ="view-warehouse"><a href="/warehouses/{{id}}">View Warehouse</a></button>
+                    <button class="btn-lg warehouse-btn" id ="view-warehouse"><a class="warehouses-button warehouse-btn" href="/warehouses/{{id}}">View Warehouse</a></button>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
 		        </article>
-            </li>
-        </ul>
 	{{/each}}
 </section>
 <script src="/script.js"></script> 
