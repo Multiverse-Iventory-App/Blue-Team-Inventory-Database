@@ -12,11 +12,11 @@ availableCapacity = value
 
 //delete pallete button
 deleteBtn.addEventListener('click', async () => {
-    let res = await fetch (`/palletes/${id}`, {
+    let res = await fetch (`/pallete/${id}`, {
         method: 'DELETE'
     })
     console.log(res)
-    window.location.assign('/warehouse/')
+    window.location.assign(`/warehouses/${id}`)
 });
 
 //add and delete boxes button
