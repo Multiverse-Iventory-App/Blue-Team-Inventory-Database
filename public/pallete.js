@@ -16,7 +16,7 @@ deleteBtn.addEventListener('click', async () => {
         method: 'DELETE'
     })
     console.log(res)
-    window.location.assign(`/warehouses/${id}`)
+    //window.location.assign('/warehouse/')
 });
 
 //add and delete boxes button
