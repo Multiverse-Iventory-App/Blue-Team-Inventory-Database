@@ -1,9 +1,14 @@
-
 const deleteBtn = document.querySelector('#delete-btn')
-
 const boxCounter = document.querySelector('#box-counter')
 
+const maxCapacity = document.querySelector('#max-capacity').innerHTML
+const currentCapacity = document.querySelector('#current-capacity').innerHTML
+let availableCapacity = document.querySelector('#available-capacity').innerHTML;
+
 const id = window.location.pathname.split('/palletes/')[1]
+
+let value = parseInt(maxCapacity) - parseInt(currentCapacity)
+availableCapacity = value
 
 //delete pallete button
 deleteBtn.addEventListener('click', async () => {
@@ -11,7 +16,7 @@ deleteBtn.addEventListener('click', async () => {
         method: 'DELETE'
     })
     console.log(res)
-    window.location.assign('/palletes')
+    window.location.assign('/warehouse/')
 });
 
 //add and delete boxes button
