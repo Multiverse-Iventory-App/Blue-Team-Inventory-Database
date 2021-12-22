@@ -17,11 +17,12 @@
 	<br>
 	<br>
 </div>
+<h2>Current Palletes</h2>
 {{#each warehouse.Palletes}} 
                 <article class="card">
 			        <h3>Max Capacity: {{capacity}}</h3>
                     <h3>Pallete Id: {{id}}</h3>
-                    <button id ="view-boxes"><a href="/palletes/{{id}}">View boxes</a></button>
+                    <button id ="view-pallete"><a href="/pallete/{{id}}">View Pallete</a></button>
 		        </article>
           
 	{{/each}}
