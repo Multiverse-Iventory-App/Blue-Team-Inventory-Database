@@ -83,20 +83,19 @@ app.get('/pallete', async (req, res) => {
     res.render('palletes', {allPallete}) 
 });
 
-app.get('/new-pallete', async (req, res) => {
-    res.render('newPalleteForm')
+app.get('/new-pallete/:id', async (req, res) => {
+    const id = req.params.id
+    res.render('newPalleteForm', {id})
 })
 
-app.post('/new-pallete', async (req,res) =>{
+app.post('/new-pallete/:id', async (req,res) =>{
 console.log(req.body);
-    const newPallete = await Pallete.create(req.body)
-    
-    
+    const newPallete = await Pallete.create({"capacity": req.body.capacity, "WarehouseId": req.params.id})  
     let palleteAlert = `${(newPallete.capacity)} added to your database`
-    
     const foundPallete = await Pallete.findByPk(newPallete.id)
     if(foundPallete){
-        res.render('newPalleteForm',{})
+        res.redirect(`/warehouses/${foundPallete.WarehouseId}`)
+        //res.render('newPalleteForm',{})
     } else {
         palleteAlert = 'Failed to add Pallete'
         res.render('newPalleteForm',{palleteAlert})
