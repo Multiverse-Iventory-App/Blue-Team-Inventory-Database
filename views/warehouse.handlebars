@@ -1,10 +1,15 @@
 <div>
-    <img class="item-img" src="{{image}}"/>
-	<h2>Warehouse: {{warehouse.name}}</h2>
-    <h3>Location: {{warehouse.location}}</h3>
-	<h3>Capacity: {{warehouse.capacity}}</h3>
-	<br>
-	<br>
+	<ul >
+		 <li >
+            <article class="card">
+                <img class="item-img" src="{{warehouse.image}}"/>
+			    <h2>Name: {{warehouse.name}}</h2>
+			    <h3>Location: {{warehouse.location}}</h3>
+			    <h3>Capacity: {{warehouse.capacity}}</h3>
+                <br>
+		    </article>
+        </li>
+    </ul>
 	<div class='button-list'>
         <button><a href="/new-pallete">Add New Pallet!</a></button>
 		<button id="goBack-btn"><a class="main-button" href="/warehouses">Go Back to Warehouses List</a></button>
@@ -12,5 +17,17 @@
 	<br>
 	<br>
 </div>
+{{#each warehouse.Palletes}} 
+		<ul>
+            <li>
+                <article class="card">
+			        <h3>Capacity: {{capacity}}</h3>
+                    <h3>Id: {{id}}</h3>
+                    <button id ="view-boxes"><a href="/palletes/{{id}}">View boxes</a></button>
+		        </article>
+            </li>
+        </ul>
+	{{/each}}
+	 
 
 <script src="/script.js"></script>
