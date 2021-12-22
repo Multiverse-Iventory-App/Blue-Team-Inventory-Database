@@ -1,3 +1,11 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
 /* /* header styles */
 #logo-img{ 
     margin-left:100px;
@@ -8,27 +16,41 @@
 
 .banner-img {
     height: 450px;
+    width:100%;
 }
 
 
 /* main-button styles */
-#warehouses-button{ 
+.warehouses-button{ 
   color :antiquewhite;
   text-decoration: none;
+  background-color: rgb(52, 4, 184);
+  height: 200px;
     
 }
 
 .btn-lg{
   background-color: rgb(52, 4, 184);
-  
+  border-radius: 7px;
+  padding-left: .3cm;
+  padding-right: .3cm;
 }
 .main-button{
-    
     display: flex;
     justify-content: center;
     align-items: center;
     height: 200px;
+    
 }
+
+.btn-lg a:hover {
+    color: #ddd;
+}
+
+.button-list button{
+    margin-right: 1cm;
+}
+
 
 /* employee-news-section styles */
 .news-header{
@@ -60,7 +82,7 @@
 
 .footer{
     align-items: center;
-    margin-top:1.5in;
+    margin-top:.5in;
     margin-bottom:1cm;    
 }
 
@@ -84,7 +106,7 @@
 
 
 .dropbtn {
-    background-color: #04aa6d;
+    background-color: rgb(52, 4, 184);
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -94,6 +116,7 @@
   .dropdown {
     position: relative;
     display: inline-block;
+
   }
   
   .dropdown-content {
@@ -121,16 +144,15 @@
   }
   
   .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
+    background-color: rgb(145, 115, 226);
   }
-  
-  /* warehouse- styles */
-  .signle-warehouse-card{
-    justify-content: center;
-    align-items: center;
-  }
+ 
   .item-img{
-    height: 200px;
-    width:350px;
-    
+    height: 600px;
+    width:900px;
+  }
+
+  .warehouse-btn{
+    height: 60px;
+
   }
