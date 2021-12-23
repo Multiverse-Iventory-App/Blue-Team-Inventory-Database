@@ -1,6 +1,6 @@
 const deleteBtn = document.querySelector('#delete-btn')
 const boxCounter = document.querySelector('#box-counter')
-const warehouseId = document.querySelector('#warehouse.id')
+const warehouseId = document.querySelector('#warehouse-id').innerHTML
 const maxCapacity = document.querySelector('#max-capacity').innerHTML
 const currentCapacity = document.querySelector('#current-capacity').innerHTML
 // const id = document.querySelector('#pallete-id').innerHTML;
