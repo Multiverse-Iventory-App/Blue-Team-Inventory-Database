@@ -114,10 +114,10 @@ console.log(req.body);
 
 })
 
-//DELETE method,  Deletes a pallete from db.sqlite
 app.delete('/pallete/:id', async (req,res)=>{
-    const deletedPallete = await Pallete.findByPk(req.params.id)
-    await deletedPallete.destroy()
+    const deletedPallete = await Pallete.destroy({
+        where: {id:req.params.id}
+    })
     res.send(deletedPallete ? 'Deleted' : 'Deletion Failed')
 })
 
@@ -129,35 +129,54 @@ app.put('/pallete/:id', async (req,res) => {
     res.render('palletes', {pallete})
 })
 
-
 //box
 app.get('/box', async (req, res) => {
     const allBox = await Box.findAll();
     res.render('boxes', {allBox}) 
 });
 
+app.get('/new-box/:id', async (req, res) => {
+    const id = req.params.id
+    res.render('newBoxForm', {id})
+})
 
-app.post('/new-box', async (req,res) =>{
-
-    const newBox = await Box.create(req.body)
-
-    let boxAlert = `${newBox.name} added to your database`
-    
+app.post('/new-box/:id', async (req,res) =>{
+    const newBox = await Box.create({"item_name": req.body.item_name, "content_QTY": req.body.content_QTY, "PalleteId": req.params.id})
+    let boxAlert = `${newBox.item_name} box added to your pallete`
     const foundBox = await Box.findByPk(newBox.id)
     if(foundBox){
-        res.render('newBoxForm',{boxAlert})
+        res.redirect(`/pallete/${foundBox.PalleteId}`)
     } else {
         boxAlert = 'Failed to add Pallete'
         res.render('newBoxForm',{boxAlert})
     }
 })
+
 //DELETE method,  Deletes a pallete from db.sqlite
 app.delete('/box/:id', async (req,res)=>{
     const deletedBox = await Box.destroy({
         where: {id:req.params.id}
     })
-    res.send(deletedBox ? 'Deleted' : 'Deletion Failed')
+    //res.send(deletedBox ? 'Deleted' : 'Deletion Failed')
+    if(deletedBox){
+        res.redirect(`/pallete/${pallete.PalleteId}`)
+    } else {
+        deleteAlert = 'Failed to delete box'
+        res.render('newBoxForm',{boxAlert})
+    }
 })
+
+// app.post('/new-box/:id', async (req,res) =>{
+//     const newBox = await Box.create({"item_name": req.body.item_name, "content_QTY": req.body.content_QTY, "PalleteId": req.params.id})
+//     let boxAlert = `${newBox.item_name} box added to your pallete`
+//     const foundBox = await Box.findByPk(newBox.id)
+//     if(foundBox){
+//         res.redirect(`/pallete/${foundBox.PalleteId}`)
+//     } else {
+//         boxAlert = 'Failed to add Pallete'
+//         res.render('newBoxForm',{boxAlert})
+//     }
+// })
 
 app.put('/box/:id', async (req,res) => {
     let updatedBox = await Box.update(req.body, {

@@ -1,4 +1,5 @@
-<form action="/new-box" method="post">
+<h1>New Box Form</h1>
+<form action="/new-box/{{id}}" method="post">
     <label for="item_name">Name of the Item:</label>
     <input type="text" id="item_name" name="item_name" required><br/>
     <label for="content_QTY">Quantity of Content:</label>
@@ -8,5 +9,5 @@
 
 <h3>{{boxAlert}}</h3>
 
-<a href="/boxes"><h2>Back</h2></a>
+<a href="/pallete/{{id}}"><h2>Back</h2></a>
 

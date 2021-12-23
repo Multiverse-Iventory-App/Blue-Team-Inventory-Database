@@ -26,11 +26,25 @@ body {
             <br>
 	</article>
 	<div class='button-list'>
-		<button class="btn btn-lg warehouse-btn warehouses-button" id="delete-btn">Delete Pallete</button>
+		<button id="delete-btn">Delete Pallete</button>
+		<button><a class="palletes-button" href="/new-box/{{pallete.id}}">Add New Box!</a></button>
+		<button><a class="palletes-button" href="/warehouses/{{pallete.WarehouseId}}">Go Back to Palletes List</a></button>
 	</div>
 	<br>
 	<br>
 </div>
+
+<h2>Current Boxes</h2>
+{{#each pallete.Boxes}} 
+                <article class="card grid-container">
+				<div class="grid-item">
+			        <h3>Contents Name: {{item_name}}</h3>
+                    <h3>Content Quantity: {{content_QTY}}</h3>
+                    {{!-- <button id ="view-box"><a href="//{{id}}">View Pallete</a></button> --}}
+				</div>
+		        </article>
+          
+{{/each}}
 
 	 
 
