@@ -30,7 +30,7 @@ body {
 }
 </style>
 
-<h1>Pallete View</h1>
+<h1>Pallete View of Pallete <span id="pallete-id">{{pallete.id}}</span></h1>
 
 <div>
 	<article class="card">
@@ -56,7 +56,8 @@ body {
 {{#each pallete.Boxes}} 
 				<div class="grid-item">
 			        <h3>Contents Name: {{item_name}}</h3>
-                    <h3>Content Quantity: {{content_QTY}}</h3>
+              <h3>Content Quantity: {{content_QTY}}</h3>
+              <button id='box-{{id}}' onclick="deleteBox({{id}})">Delete</button>
 				</div>
 {{/each}}
 </article>
