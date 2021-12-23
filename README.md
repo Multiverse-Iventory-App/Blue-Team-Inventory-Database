@@ -27,4 +27,4 @@ pallets page that shous you the pallete and how manay boxes it can hold
 <h2> Credits </h2>
 Lamin Suso <br>
 Amanda Renfro <br>
-Jannatul Baki Diba
+Jannatul Bakia Diba
