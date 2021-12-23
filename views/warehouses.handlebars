@@ -1,10 +1,10 @@
-<section>
-	<div>
-        <h2 >There are {{allWarehouse.length}} Warehouses</h2>
+<section >
+	<div class = "center-content">
+        <h2>There are {{allWarehouse.length}} Warehouses</h2>
         <br>
         <br>
 
-        <div class="dropdown">
+        <div class="dropdown center-content">
             <button class="btn btn-lg warehouse-btn dropbtn">Warehouses</button>
             <div class="dropdown-content">
                 {{#each allWarehouse}}
@@ -16,7 +16,7 @@
           <br>
     </div>
 	    
-        
+        <div class = "center-content">
         {{#each allWarehouse}} 
                 <article class="card">
                     <img class="item-img" src="{{image}}"/>
@@ -31,5 +31,6 @@
                     <br>
 		        </article>
 	{{/each}}
+    </div>
 </section>
 <script src="/script.js"></script> 

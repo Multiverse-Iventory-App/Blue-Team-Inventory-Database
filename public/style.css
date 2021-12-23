@@ -1,179 +1,206 @@
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* /* header styles */
-#logo-img{ 
-    margin-left:100px;
-    height: 50px;
-    width: 200px; 
-    margin-bottom: 70px;  
+#logo-img {
+  margin-left: 100px;
+  height: 50px;
+  width: 200px;
+  margin-bottom: 70px;
 }
 
 .banner-img {
-    height: 450px;
-    width:100%;
+  height: 500px;
 }
-
 
 /* main-button styles */
-.warehouses-button{ 
-  color :antiquewhite;
+.warehouses-button {
+  color: antiquewhite;
   text-decoration: none;
-  background-color: rgb(52, 4, 184);
+  background-color: rgb(82, 29, 228);
   height: 200px;
-    
 }
 
-.btn-lg{
-  background-color: rgb(52, 4, 184);
+.btn-lg {
+  background-color: rgb(82, 29, 228);
   border-radius: 7px;
-  padding-left: .3cm;
-  padding-right: .3cm;
+  padding-left: 0.3cm;
+  padding-right: 0.3cm;
 }
-.main-button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    
+.main-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
 }
 
 .btn-lg a:hover {
-    color: #ddd;
+  color: #ddd;
 }
 
-.button-list button{
-    margin-right: 1cm;
+.button-list button {
+  margin-right: 1cm;
 }
-
 
 /* employee-news-section styles */
-.news-header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
+.news-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
 }
 
-.employees{
-    justify-content: center;
-    align-items: center;
-    display: inline-block;
-    margin-left: 2%;
-    margin-right: 2%; 
-    margin-top: 2cm;   
-    
+.employees {
+  justify-content: center;
+  align-items: center;
+  display: inline-block;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 2cm;
+}
+
+.card-img-top {
+  height: 2in;
 }
 
 /* FAQ -section styles */
 
-.faq-sec-img{
-    width:550px;
-    height:550px;
-    margin-left:5%;
+.faq-sec-img {
+  width: 550px;
+  height: 550px;
+  margin-left: 5%;
 }
 
 /* ------- Fotter-Styles -------- */
 
-.footer{
-    align-items: center;
-    margin-top:.5in;
-    margin-bottom:1cm;    
+.footer {
+  align-items: center;
+  margin-top: 0.5in;
+  margin-bottom: 1cm;
 }
 
-.social-icons{    
-    display:flex;
-    justify-content: center;
+.social-icons {
+  display: flex;
+  justify-content: center;
 }
 
-.icons-img{
-    margin-left: .2cm;
-    margin-right: .2cm;
+.icons-img {
+  margin-left: 0.2cm;
+  margin-right: 0.2cm;
 }
 
-.copyright small{
-    margin-top:1cm;
-    display:flex;
-    justify-content: center;
+.copyright small {
+  margin-top: 1cm;
+  display: flex;
+  justify-content: center;
 }
 
 /* warehouses handlebar styles */
 
-
 .dropbtn {
-    background-color: rgb(52, 4, 184);
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
+  background-color: rgb(52, 4, 184);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
 
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #ddd;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .dropdown:hover .dropbtn {
-    background-color: rgb(145, 115, 226);
-  }
- 
-  .item-img{
-    height: 600px;
-    width:900px;
-  }
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 778px;
+}
 
-  .warehouse-btn{
-    height: 60px;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fdf3f3;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(245, 222, 222, 0.993);
+  z-index: 1;
+  background-color: transparent !important;
+}
 
-  }
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
 
-  /* ------- Pallete grid-Styles -------- */
+.dropdown-content a:hover {
+  background-color: rgb(250, 245, 245);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: rgb(145, 115, 226);
+}
+
+.item-img {
+  height: 600px;
+  width: 900px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: rgb(145, 115, 226);
+}
+
+.item-img {
+  height: 600px;
+  width: 900px;
+}
+
+.warehouse-btn {
+  height: 60px;
+}
+
+/* ------- Pallete grid-Styles -------- */
 
 .grid-container {
   display: grid;
-  /* grid-column-gap: 50px; */
   justify-content: space-evenly;
   grid-template-columns: auto auto auto;
   background-color: #2196f3;
   padding: 10px;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
 }
 .grid-item {
-  /* display: block; */
+  display: block;
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 20px;
   font-size: 20px;
   text-align: center;
-  /* display: inline-grid; */
 }
