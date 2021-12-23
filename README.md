@@ -29,10 +29,9 @@ pallets page that shous you the pallete and how manay boxes it can hold
   
  <h4> flow Diagram </h4>
 <img width="419" alt="flow" src="https://user-images.githubusercontent.com/15171226/147248270-ae4fcbbc-9c8d-4476-8485-54f7af67e6c1.PNG">
-
-
-
-
+  
+ <h2> Full test coverage </h2>
+  <img width="619" alt="full_test_coverage" src="https://user-images.githubusercontent.com/15171226/147284940-edf28f58-798d-4605-ab81-46bff9832e9c.png">
 
 <h2> Credits </h2>
 Lamin Suso <br>
