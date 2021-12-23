@@ -116,9 +116,8 @@ console.log(req.body);
 
 //DELETE method,  Deletes a pallete from db.sqlite
 app.delete('/pallete/:id', async (req,res)=>{
-    const deletedPallete = await Pallete.destroy({
-        where: {id:req.params.id}
-    })
+    const deletedPallete = await Pallete.findByPk(req.params.id)
+    await deletedPallete.destroy()
     res.send(deletedPallete ? 'Deleted' : 'Deletion Failed')
 })
 
