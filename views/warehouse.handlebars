@@ -1,4 +1,14 @@
-<section class = "center-content">
+<style>
+	#view-pallete{
+		text-decoration: none;
+		background-color: rgb(82, 29, 228);
+		color: white;
+		border-radius: 4px;
+	}
+</style>
+
+
+<section class = "center-content container">
 <div>
     <article class = "card" >
         	<img class="item-img" src="{{warehouse.image}}"/>
@@ -24,7 +34,7 @@
 				<div class="grid-item">
 			        <h3>Max Capacity: {{capacity}}</h3>
                     <h3>Pallete Id: {{id}}</h3>
-                    <button id ="view-pallete"><a href="/pallete/{{id}}">View Pallete</a></button>
+                    <button id ="view-pallete"><a class="warehouses-button" href="/pallete/{{id}}">View Pallete</a></button>
 				</div>
 	{{/each}}
 </article>
