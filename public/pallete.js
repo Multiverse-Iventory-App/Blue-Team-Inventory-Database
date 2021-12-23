@@ -1,12 +1,12 @@
 const deleteBtn = document.querySelector('#delete-btn')
 const boxCounter = document.querySelector('#box-counter')
-
+const warehouseId = document.querySelector('#warehouse.id')
 const maxCapacity = document.querySelector('#max-capacity').innerHTML
 const currentCapacity = document.querySelector('#current-capacity').innerHTML
 // const id = document.querySelector('#pallete-id').innerHTML;
 let availableCapacity = document.querySelector('#available-capacity').innerHTML;
 
-const id = window.location.pathname.split('/palletes/')[1]
+const id = window.location.pathname.split('/pallete/')[1]
 
 
 
@@ -15,12 +15,14 @@ availableCapacity = value
 
 //delete pallete button
 deleteBtn.addEventListener('click', async () => {
-    const id = window.location.pathname.split('/palletes/')[1]
+    console.log(id)
+    //const id = window.location.pathname.split('/pallete/')[1]
+
     let res = await fetch(`/pallete/${id}`, {
         method: 'DELETE'
     })
     console.log(res)
-    //window.location.assign('/warehouses/${id}')
+    window.location.assign(`/warehouses/${warehouseId}`)
 });
 
 // async function deletedPallete(id){

@@ -19,13 +19,15 @@
 </div>
 <h2>Current Palletes</h2>
 {{#each warehouse.Palletes}} 
-                <article class="card">
+                <article class="card grid-container">
+				<div class="grid-item">
 			        <h3>Max Capacity: {{capacity}}</h3>
                     <h3>Pallete Id: {{id}}</h3>
                     <button id ="view-pallete"><a href="/pallete/{{id}}">View Pallete</a></button>
+				</div>
 		        </article>
           
-	{{/each}}
+{{/each}}
 	 
 
 <script src="/warehouse.js"></script>

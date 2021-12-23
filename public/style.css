@@ -156,3 +156,24 @@ body{
     height: 60px;
 
   }
+
+  /* ------- Pallete grid-Styles -------- */
+
+.grid-container {
+  display: grid;
+  /* grid-column-gap: 50px; */
+  justify-content: space-evenly;
+  grid-template-columns: auto auto auto;
+  background-color: #2196f3;
+  padding: 10px;
+  /* box-sizing: border-box; */
+}
+.grid-item {
+  /* display: block; */
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+  /* display: inline-grid; */
+}
