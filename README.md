@@ -5,4 +5,4 @@
 A landing Page with a login, logout and manage warehouse inventory.
 Warehouses page, this displays all the warehouse currently available.
 Warehouse page, this display single warehous and also shows you how many pallets are on it.
-pallets page that shous you the pallete and how manay boxes it can hold.
+pallets page that shous you the pallete and how manay boxes it can hold
