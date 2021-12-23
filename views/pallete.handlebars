@@ -1,15 +1,32 @@
+<style>
+	body {
+  background-color: rgb(207, 226, 250);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* /* header styles */
+.item-img {
+  height: 300px;
+  width: 500px;
+}
+</style>
+
 <h1>Pallete</h1>
 
 <div>
 	<article class="card">
-        <img class="item-img" src=""/>
+        {{!-- <img class="item-img" src=""/>y --}}
+			<img class="item-img" src="/images/pallete1.png">
 			<h3>Max Box Capacity: <span id="max-capacity">{{pallete.capacity}}</span></h3>
 			<h3>Current Box Count: <span id="current-capacity">{{warehouse.Palletes.Boxes.length}}</span></h3>
 			<h3>Available Box Capacity: <span id="available-capacity"></span></h3>
             <br>
 	</article>
 	<div class='button-list'>
-		<button id="delete-btn">Delete Pallete</button>
+		<button class="btn btn-lg warehouse-btn warehouses-button" id="delete-btn">Delete Pallete</button>
 	</div>
 	<br>
 	<br>
