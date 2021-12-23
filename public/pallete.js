@@ -1,4 +1,6 @@
 const deleteBtn = document.querySelector('#delete-btn')
+const deleteBoxBtn = document.querySelector('#box-id')
+const palleteId = document.querySelector('#pallete-id').innerHTML
 const boxCounter = document.querySelector('#box-counter')
 const warehouseId = document.querySelector('#warehouse-id').innerHTML
 const maxCapacity = document.querySelector('#max-capacity').innerHTML
@@ -25,9 +27,14 @@ deleteBtn.addEventListener('click', async () => {
     window.location.assign(`/warehouses/${warehouseId}`)
 });
 
-// async function deletedPallete(id){
-//     //delete a sauce matching parameter id
-//     let res = await fetch(`/palletes/${id}` ,{
+async function deleteBox(id){
+    let res = await fetch(`/box/${id}` ,{
+        method: 'DELETE'
+    })
+    console.log(res)
+}
+// async function deletedBox(id){
+//     let res = await fetch(`/pallet/${id}` ,{
 //         method: 'DELETE'
 //     })
 //     console.log(res)

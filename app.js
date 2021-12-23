@@ -126,7 +126,7 @@ app.put('/pallete/:id', async (req,res) => {
         where: {id: req.params.id}
     })
     const pallete = await Pallete.findByPk(req.params.id)
-    res.render('palletes', {pallete})
+    res.render('pallete', {pallete})
 })
 
 //box
@@ -159,10 +159,11 @@ app.delete('/box/:id', async (req,res)=>{
     })
     //res.send(deletedBox ? 'Deleted' : 'Deletion Failed')
     if(deletedBox){
-        res.redirect(`/pallete/${pallete.PalleteId}`)
+    res.send("deleted Box")
+    //     res.redirect(`/pallete/${req.params.pallete}`)
     } else {
-        deleteAlert = 'Failed to delete box'
-        res.render('newBoxForm',{boxAlert})
+        res.send("failed to delete")
+    //     res.redirect(`/pallete/${req.params.pallete}`)
     }
 })
 
