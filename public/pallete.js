@@ -14,9 +14,9 @@ let value = parseInt(maxCapacity) - parseInt(currentCapacity)
 availableCapacity = value
 
 //delete pallete button
-deleteBtn.addEventListener('click', async (id) => {
-    console.log(id)
-    let res = await fetch (`/pallete/${id}`, {
+deleteBtn.addEventListener('click', async () => {
+    const id = window.location.pathname.split('/palletes/')[1]
+    let res = await fetch(`/pallete/${id}`, {
         method: 'DELETE'
     })
     console.log(res)

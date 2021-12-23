@@ -115,9 +115,16 @@ console.log(req.body);
 })
 
 //DELETE method,  Deletes a pallete from db.sqlite
-app.delete('/pallete/:id', async (req,res)=>{
-    const deletedPallete = await Pallete.findByPk(req.params.id)
-    await deletedPallete.destroy()
+// app.delete('/pallete/:id', async (req,res)=>{
+//     const deletedPallete = await Pallete.findByPk(req.params.id)
+//     await deletedPallete.destroy()
+//     res.send(deletedPallete ? 'Deleted' : 'Deletion Failed')
+// })
+
+app.delete('/palletes/:id', async (req,res)=>{
+    const deletedPallete = await Pallete.destroy({
+        where: {id:req.params.id}
+    })
     res.send(deletedPallete ? 'Deleted' : 'Deletion Failed')
 })
 
@@ -128,7 +135,6 @@ app.put('/pallete/:id', async (req,res) => {
     const pallete = await Pallete.findByPk(req.params.id)
     res.render('palletes', {pallete})
 })
-
 
 //box
 app.get('/box', async (req, res) => {
