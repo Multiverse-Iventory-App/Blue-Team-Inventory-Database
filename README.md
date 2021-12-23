@@ -5,7 +5,8 @@ JavaScript, <br>
 HTML5, <br>
 node.js, <br>
 express.js, <br>
-Sequelize
+Sequelize, <br>
+jest.
 
 <h2> Features Includes</h2>
 
