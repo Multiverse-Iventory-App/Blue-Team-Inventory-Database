@@ -6,14 +6,16 @@ const warehouseId = document.querySelector('#warehouse-id').innerHTML
 const maxCapacity = document.querySelector('#max-capacity').innerHTML
 const currentCapacity = document.querySelector('#current-capacity').innerHTML
 // const id = document.querySelector('#pallete-id').innerHTML;
-let availableCapacity = document.querySelector('#available-capacity').innerHTML;
+let availableCapacity = document.querySelector('#available-capacity');
 
 const id = window.location.pathname.split('/pallete/')[1]
 
-
-
 let value = parseInt(maxCapacity) - parseInt(currentCapacity)
-availableCapacity = value
+availableCapacity.innerHTML = value
+
+console.log(maxCapacity)
+console.log(currentCapacity)
+console.log(availableCapacity)
 
 //delete pallete button
 deleteBtn.addEventListener('click', async () => {
