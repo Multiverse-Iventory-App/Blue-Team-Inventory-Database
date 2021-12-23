@@ -21,9 +21,13 @@ pallets page that shous you the pallete and how manay boxes it can hold
 
 
 <h2> UML Diagrams </h2>
-  
+  <h4> Sequence Diagram </h4>
 <img width="412" alt="sequence diagram" src="https://user-images.githubusercontent.com/15171226/147247928-21379382-0c1c-4f8f-bef3-2db3fa935a30.PNG">
+  
+ <h4> usecase Diagram </h4>
 <img width="480" alt="usecase" src="https://user-images.githubusercontent.com/15171226/147248107-a52e3aa6-eacf-4576-8e4f-84f40d72c2dd.PNG">
+  
+ <h4> flow Diagram </h4>
 <img width="419" alt="flow" src="https://user-images.githubusercontent.com/15171226/147248270-ae4fcbbc-9c8d-4476-8485-54f7af67e6c1.PNG">
 
 
