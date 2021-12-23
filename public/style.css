@@ -152,7 +152,6 @@ body {
 
 .grid-container {
   display: grid;
-  /* grid-column-gap: 50px; */
   justify-content: space-evenly;
   grid-template-columns: auto auto auto;
   background-color: #2196f3;
