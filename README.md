@@ -1,6 +1,6 @@
 # Blue-Team-Inventory-Database App
 
-<h2> Techonologies used </h2>
+<h2> Techonologies used: </h2>
 JavaScript, <br>
 HTML5, <br>
 node.js, <br>
